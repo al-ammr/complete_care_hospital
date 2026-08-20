@@ -1,0 +1,171 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+/*
+ * ══════════════════════════════════════════════════════════════════════
+ * Complete Care Hospital — Global Styles & Design System
+ * ══════════════════════════════════════════════════════════════════════
+ *
+ * This file extends the Tailwind design tokens with CSS-level base
+ * styles, glassmorphism utilities, and premium component primitives.
+ */
+
+/* ── Base Layer ──────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #12304A;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-optical-sizing: auto;
+    overflow-x: hidden;
+  }
+
+  /* ── Selection highlight ── */
+  ::selection {
+    background-color: rgba(23, 105, 170, 0.2); /* Primary blue */
+    color: #12304A;
+  }
+
+  /* ── Focus ring for accessibility ── */
+  *:focus-visible {
+    outline: 2px solid #1769AA;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* ── Heading defaults (Outfit) ── */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-outfit), system-ui, sans-serif;
+    font-weight: 600;
+    color: #12304A;
+    letter-spacing: -0.02em; /* Tighter tracking for display/headings */
+    font-optical-sizing: auto;
+  }
+
+  /* ── Smooth image rendering ── */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ── Reduced motion preference ── */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ── Component Layer (Reusable Patterns) ─────────────────────────────── */
+@layer components {
+  /* ── Section Container ── */
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-container-narrow {
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ── Section Padding ── */
+  .section-padding {
+    @apply py-12 sm:py-16 lg:py-24;
+  }
+
+  .section-padding-sm {
+    @apply py-8 sm:py-12 lg:py-16;
+  }
+
+  /* ── Section Heading Group ── */
+  .section-heading {
+    @apply mx-auto mb-12 max-w-3xl text-center lg:mb-16;
+  }
+
+  .section-heading h2 {
+    @apply font-outfit text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl;
+  }
+
+  .section-heading p {
+    @apply mt-4 text-lg leading-relaxed text-text-secondary sm:text-xl;
+  }
+
+  /* ── Glassmorphism Utilities ── */
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Stronger bright top edge to catch light */
+  }
+
+  .glass-dark {
+    background: rgba(18, 48, 74, 0.85); /* Deep navy */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: saturate(180%) blur(24px);
+    -webkit-backdrop-filter: saturate(180%) blur(24px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+
+
+  /* ── Gradient Text ── */
+  .text-gradient-teal {
+    @apply bg-gradient-to-r from-secondary to-secondary-dark bg-clip-text text-transparent;
+  }
+
+  .text-gradient-navy {
+    @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
+  }
+
+  /* ── Decorative Divider ── */
+  .divider-accent {
+    @apply mx-auto h-1 w-16 rounded-full bg-secondary;
+  }
+
+  /* ── Skeleton Loading ── */
+  .skeleton {
+    @apply animate-pulse rounded-lg bg-background-surface;
+  }
+}
+
+/* ── Utility Layer ───────────────────────────────────────────────────── */
+@layer utilities {
+  /* Hide scrollbar but keep scroll functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Text pretty for body copy */
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
