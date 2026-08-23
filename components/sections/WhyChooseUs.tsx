@@ -79,7 +79,7 @@ export const WhyChooseUs = () => {
               );
             })}
             {/* CTA Button under features */}
-            <motion.div variants={fadeInUp} className="mt-4">
+            <motion.div variants={fadeInUp} className="mt-4 flex justify-center lg:justify-start">
               <Link href="/about">
                 <Button variant="default" className="rounded-full shadow-md px-8">
                   Learn More

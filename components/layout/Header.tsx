@@ -50,8 +50,8 @@ export const Header = () => {
             href="/"
             className="flex items-center gap-2 transition-opacity hover:opacity-90"
           >
-            <Image src="/logo.png" alt="Complete Care Hospital Logo" width={200} height={40} className="h-8 sm:h-10 w-auto object-contain" />
-            <span className="hidden xl:block font-outfit font-extrabold text-sm text-primary tracking-widest whitespace-nowrap uppercase">
+            <Image src="/logo.png" alt="Complete Care Hospital Logo" width={200} height={40} className="h-8 sm:h-10 w-auto object-contain" style={{ width: "auto" }} />
+            <span className="font-outfit font-extrabold text-[9px] leading-tight sm:text-xs xl:text-sm text-primary tracking-wide xl:tracking-widest max-w-[140px] sm:max-w-[200px] xl:max-w-none xl:whitespace-nowrap uppercase">
               COMPLETE CARE HOSPITAL AND LABORATORY LTD
             </span>
           </Link>

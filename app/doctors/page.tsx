@@ -104,7 +104,7 @@ export default function DoctorsPage() {
                     LinkedIn Profile
                   </a>
                 </p>
-                <div className="prose prose-lg text-text-secondary max-w-none text-left sm:text-justify space-y-6">
+                <div className="prose prose-sm sm:prose-lg text-text-secondary max-w-none text-justify sm:text-left space-y-6">
                   <p>
                     Dr. Josiah Onuche is the visionary founder and Chief Medical Director of Complete Care Hospital. With an unwavering commitment to bridging the gap between quality healthcare and underserved communities, Dr. Onuche established the hospital in 2015 with a modest 20-bed facility in Gwagwalada. His leadership and foresight have since transformed it into a leading multi-specialty healthcare institution serving thousands of families across the region.
                   </p>

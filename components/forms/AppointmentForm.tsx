@@ -44,6 +44,7 @@ export function AppointmentForm({ defaultService = "" }: { defaultService?: stri
           label="Full Name"
           name="name"
           type="text"
+          autoComplete="name"
           placeholder="Amina Yusuf"
           required
           error={state.errors?.name?.[0]}
@@ -52,6 +53,7 @@ export function AppointmentForm({ defaultService = "" }: { defaultService?: stri
           label="Email Address"
           name="email"
           type="email"
+          autoComplete="email"
           placeholder="amina@example.com"
           required
           error={state.errors?.email?.[0]}
@@ -64,6 +66,7 @@ export function AppointmentForm({ defaultService = "" }: { defaultService?: stri
           label="Phone Number"
           name="phone"
           type="tel"
+          autoComplete="tel"
           placeholder="+234 800 000 0000"
           required
           error={state.errors?.phone?.[0]}

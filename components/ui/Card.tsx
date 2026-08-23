@@ -15,11 +15,20 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
       <motion.div
         ref={ref}
         className={cn(
-          "rounded-4xl border border-border bg-background-card p-8 shadow-card transition-colors duration-300 hover:border-blue-300",
+          "rounded-2xl sm:rounded-4xl border border-border bg-background-card p-6 sm:p-8 shadow-card transition-all duration-300 hover:border-blue-300 active:scale-[0.98] active:shadow-md",
           glass && "bg-white/80 backdrop-blur-xl border-white/20",
           className
         )}
         whileHover={
+          hoverEffect
+            ? {
+                y: -8,
+                boxShadow: "0 10px 40px rgba(37, 99, 235, 0.25)",
+                transition: { type: "spring", bounce: 0.1, duration: 0.4 },
+              }
+            : undefined
+        }
+        whileTap={
           hoverEffect
             ? {
                 y: -8,

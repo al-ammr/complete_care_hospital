@@ -24,6 +24,7 @@ export const Hero = () => {
           src="/doctor.jpg"
           alt="Doctor"
           fill
+          sizes="(max-width: 1024px) 100vw, 50vw"
           priority
           unoptimized
           className="object-cover object-center"
@@ -40,17 +41,29 @@ export const Hero = () => {
           animate="show"
           className="flex flex-col justify-center max-w-2xl mb-24"
         >
-          <motion.div variants={staggerItem} className="mb-6">
+          <motion.div variants={staggerItem} className="mb-6 -mt-12 sm:mt-0">
             <span className="inline-block rounded-full bg-accent px-4 py-1.5 font-semibold tracking-wide text-white shadow-sm border border-accent/20 backdrop-blur-sm">
               Elite Healthcare in Abuja
             </span>
+          </motion.div>
+
+          <motion.div variants={staggerItem} className="block lg:hidden w-full h-56 sm:h-72 relative mb-6 rounded-2xl overflow-hidden shadow-md border border-secondary/10">
+            <Image
+              src="/doctor.jpg"
+              alt="Doctor"
+              fill
+              sizes="(max-width: 768px) 100vw, 100vw"
+              priority
+              unoptimized
+              className="object-cover object-top"
+            />
           </motion.div>
 
           <motion.h1
             variants={staggerItem}
             className="mb-4 font-outfit text-3xl font-bold leading-[1.1] text-text-primary sm:text-5xl md:text-6xl lg:text-7xl xl:text-[4.5rem]"
           >
-            World-Class Care. <br />
+            World-Class Care. <br className="hidden sm:block" />
             <span className="font-script text-primary font-normal text-4xl sm:text-6xl md:text-7xl lg:text-8xl italic">
               Extraordinary 
             </span>
@@ -59,7 +72,7 @@ export const Hero = () => {
 
           <motion.p
             variants={staggerItem}
-            className="mb-8 sm:mb-10 mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed text-text-muted md:text-xl max-w-xl"
+            className="mb-8 sm:mb-10 mt-4 sm:mt-6 text-base text-justify sm:text-left sm:text-lg leading-relaxed text-text-muted md:text-xl max-w-xl"
           >
             Experience the pinnacle of modern medicine right here in the heart of Abuja. We seamlessly combine groundbreaking medical technology with profound, patient-first empathy to deliver healthcare that doesn&apos;t just treat, it transforms.
             <br /><br />
@@ -86,7 +99,7 @@ export const Hero = () => {
         transition={{ delay: 0.8, type: "spring", stiffness: 200, damping: 25 }}
         className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 w-[95%] sm:w-[90%] max-w-5xl z-20"
       >
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 rounded-2xl sm:rounded-[2rem] bg-accent px-6 sm:px-10 py-4 sm:py-6 shadow-elevated">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6 rounded-2xl sm:rounded-[2rem] bg-accent px-6 sm:px-10 py-4 sm:py-6 shadow-elevated">
           <div className="flex items-center gap-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 text-white">
                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>

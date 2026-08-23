@@ -90,7 +90,6 @@ export const metadata: Metadata = {
     shortcut: "/icon.png",
     apple: "/icon.png",
   },
-  manifest: "/site.webmanifest",
 };
 
 import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
@@ -102,7 +101,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <script
           type="application/ld+json"

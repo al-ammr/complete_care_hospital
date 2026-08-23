@@ -53,7 +53,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, links }) 
           >
             <div className="flex h-16 sm:h-20 items-center justify-between border-b border-border px-4 sm:px-6">
               <Link href="/" className="flex items-center gap-2" onClick={onClose}>
-                <Image src="/logo.png" alt="Complete Care Hospital Logo" width={150} height={32} className="h-8 w-auto object-contain" />
+                <Image src="/logo.png" alt="Complete Care Hospital Logo" width={150} height={32} className="h-8 w-auto object-contain" style={{ width: "auto" }} />
               </Link>
               <button
                 onClick={onClose}

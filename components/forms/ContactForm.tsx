@@ -42,6 +42,7 @@ export function ContactForm() {
           label="Full Name"
           name="name"
           type="text"
+          autoComplete="name"
           placeholder="Chukwuma Obi"
           required
           error={state.errors?.name?.[0]}
@@ -50,6 +51,7 @@ export function ContactForm() {
           label="Email Address"
           name="email"
           type="email"
+          autoComplete="email"
           placeholder="chukwuma@example.com"
           required
           error={state.errors?.email?.[0]}
@@ -62,6 +64,7 @@ export function ContactForm() {
           label="Phone Number"
           name="phone"
           type="tel"
+          autoComplete="tel"
           placeholder="+234 800 000 0000"
           required
           error={state.errors?.phone?.[0]}

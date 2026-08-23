@@ -2,6 +2,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import * as LucideIcons from "lucide-react";
 import { services, doctors } from "@/lib/data";
@@ -59,7 +60,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <h1 className="mb-3 sm:mb-4 font-outfit text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">
                 {service.title}
               </h1>
-              <p className="max-w-2xl text-sm sm:text-base md:text-lg text-white">
+              <p className="max-w-2xl text-lg sm:text-base md:text-lg text-white">
                 {service.description}
               </p>
             </div>
@@ -72,6 +73,19 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         <div className="section-container grid gap-8 sm:gap-12 lg:gap-16 lg:grid-cols-3">
           <div className="lg:col-span-2">
             <h2 className="mb-4 sm:mb-6 font-outfit text-2xl sm:text-3xl font-bold text-primary">Overview</h2>
+            
+            {/* Mobile-only image container before the writeup */}
+            <div className="block sm:hidden mb-6 relative w-full h-64 rounded-xl overflow-hidden shadow-md">
+              <Image 
+                src={service.imageUrl} 
+                alt={service.title} 
+                fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover"
+                unoptimized 
+              />
+            </div>
+
             <div className="prose prose-lg text-text-secondary max-w-none">
               <p>
                 Our {service.title} department is dedicated to providing the highest standard of care. 

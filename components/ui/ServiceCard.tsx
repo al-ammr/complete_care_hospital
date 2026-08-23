@@ -32,6 +32,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <motion.div
       whileHover={cardHover}
+      whileTap={cardHover}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -47,6 +48,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           src={imageUrl || "/hospital_facility_1786558559005.jpg"}
           alt={title}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-primary/10 transition-opacity duration-300 group-hover:opacity-0" />

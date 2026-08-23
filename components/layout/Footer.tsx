@@ -36,7 +36,7 @@ export const Footer = () => {
             {/* Column 1: Brand & Contact */}
             <div className="flex flex-col gap-4 sm:gap-6 lg:-mt-8 xl:-ml-4 w-full sm:max-w-sm lg:w-[350px] xl:w-[400px]">
               <Link href="/" className="flex items-center gap-2">
-                <Image src="/logo.png" alt="Complete Care Hospital Logo" width={200} height={40} className="h-10 w-auto object-contain" />
+                <Image src="/logo.png" alt="Complete Care Hospital Logo" width={200} height={40} className="h-10 w-auto object-contain" style={{ width: "auto" }} />
               </Link>
               <p className="text-text-secondary leading-relaxed">
                 Premium healthcare services, advanced diagnostics, and compassionate care in the heart of Gwagwalada, Abuja.
