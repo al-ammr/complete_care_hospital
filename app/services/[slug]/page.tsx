@@ -41,7 +41,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   // Find related doctors based on specialty matching the service title
   const relatedDoctors = doctors.filter((doc) => doc.specialty.includes(service.title));
-  const Icon = (LucideIcons as Record<string, React.ElementType>)[service.iconName] || LucideIcons.Activity;
+  const Icon = (LucideIcons as unknown as Record<string, React.ElementType>)[service.iconName] || LucideIcons.Activity;
 
   return (
     <div className="flex flex-col">
