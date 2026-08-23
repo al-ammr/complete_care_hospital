@@ -27,7 +27,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   delay = 0,
 }) => {
   // Dynamically resolve the lucide icon
-  const Icon = (LucideIcons as Record<string, React.ElementType>)[iconName] || LucideIcons.Activity;
+  const Icon = (LucideIcons as unknown as Record<string, React.ElementType>)[iconName] || LucideIcons.Activity;
 
   return (
     <motion.div
