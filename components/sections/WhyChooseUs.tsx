@@ -41,7 +41,7 @@ export const WhyChooseUs = () => {
     <section className="bg-white py-24 lg:py-32 relative overflow-hidden">
       <div className="section-container relative z-10">
         <SectionHeading
-          title="Why Choose Complete Care?"
+          title="Why Choose Complete Care Hospital?"
           subtitle="We combine world-class medical expertise with compassionate care to provide the best possible outcomes for our patients."
           badge="Our Differentiators"
           align="left"

@@ -36,7 +36,7 @@ export default function AboutPage() {
       <section className="bg-primary pt-24 sm:pt-32 pb-12 sm:pb-20 text-center">
         <div className="section-container">
           <h1 className="mb-6 font-outfit text-3xl font-bold text-white sm:text-5xl md:text-6xl">
-            About Complete Care
+            About Complete Care Hospital
           </h1>
 
           <div className="block sm:hidden w-full h-56 relative mb-6 rounded-2xl overflow-hidden shadow-xl border border-secondary/20">
