@@ -114,15 +114,15 @@ export const Footer = () => {
               <ul className="flex flex-col gap-4 text-text-secondary">
                 <li className="flex justify-between border-b border-primary/10 pb-2">
                   <span>Monday - Friday</span>
-                  <span className="font-medium text-primary">8:00 AM - 8:00 PM</span>
+                  <span className="font-medium text-primary">Always Open</span>
                 </li>
                 <li className="flex justify-between border-b border-primary/10 pb-2">
                   <span>Saturday</span>
-                  <span className="font-medium text-primary">9:00 AM - 5:00 PM</span>
+                  <span className="font-medium text-primary">Always Open</span>
                 </li>
                 <li className="flex justify-between border-b border-primary/10 pb-2">
                   <span>Sunday</span>
-                  <span className="font-medium text-primary">Closed</span>
+                  <span className="font-medium text-primary">Always Open</span>
                 </li>
                 <li className="mt-2 flex items-start gap-3 rounded-lg bg-accent/10 p-4">
                   <Clock size={20} className="shrink-0 text-accent" />
