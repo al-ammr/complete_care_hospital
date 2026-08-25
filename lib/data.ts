@@ -4,7 +4,7 @@ export const services = [
     title: "General Diagnostics",
     slug: "general-diagnostics",
     description: "Experience world-class general diagnostic care. From precise early diagnostics to comprehensive evaluations, our elite specialists are dedicated to restoring your vitality and extending your life.",
-    imageUrl: "/1general.jpeg",
+    imageUrl: "/1general.jpg",
     iconName: "Activity",
   },
   {
