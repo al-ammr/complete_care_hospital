@@ -88,7 +88,7 @@ export const Footer = () => {
               <h4 className="mb-4 sm:mb-6 font-outfit text-lg font-bold">Top Services</h4>
               <ul className="flex flex-col gap-3 text-text-secondary">
                 <li>
-                  <Link href="/services/cardiology" className="hover:text-accent transition-colors">Cardiology</Link>
+                  <Link href="/services/general-diagnostics" className="hover:text-accent transition-colors">General Diagnostics</Link>
                 </li>
                 <li>
                   <Link href="/services/oncology" className="hover:text-accent transition-colors">Oncology Center</Link>

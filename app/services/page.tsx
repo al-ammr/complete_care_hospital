@@ -7,7 +7,7 @@ import { services } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Our Services | Complete Care Hospital",
-  description: "Explore our wide range of medical specialties including Cardiology, Oncology, Orthopedics, Pediatrics, and 24/7 Emergency Care.",
+  description: "Explore our wide range of medical specialties including General Diagnostics, Oncology, Orthopedics, Pediatrics, and 24/7 Emergency Care.",
 };
 
 export default function ServicesPage() {
